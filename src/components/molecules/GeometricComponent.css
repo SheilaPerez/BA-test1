@@ -1,0 +1,23 @@
+.triangle {
+    width: 0;
+    height: 0;
+    margin: 20px 0 40px 80px;
+  }
+  
+  .circle {
+    border-radius: 100px;
+    margin: 20px 0 40px 50px;
+  }
+  
+  .square {
+    margin: 20px 0 40px 70px;
+  }
+  
+  .inputName {
+    width: 60px;
+  }
+  
+  .label {
+    margin-left: 10px;
+    margin-right: 20px;
+  }
