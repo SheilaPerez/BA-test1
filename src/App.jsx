@@ -41,13 +41,13 @@ function App() {
     setSquareColorValue(e.target.value)
   }
   const changeSizeTriangle = (e) => {
-    setTriangleSize(e.target.value)
+    setTriangleSize(parseInt(e.target.value, 10))
   }
   const changeSizeCircle = (e) => {
-    setCircleSize(e.target.value)
+    setCircleSize(parseInt(e.target.value, 10))
   }
   const changeSizeSquare = (e) => {
-    setSquareSize(e.target.value)
+    setSquareSize(parseInt(e.target.value, 10))
   }
 
   return (

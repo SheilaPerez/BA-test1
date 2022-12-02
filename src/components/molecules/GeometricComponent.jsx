@@ -18,7 +18,7 @@ function GeometricComponent({
       <input
         type="number"
         // eslint-disable-next-line radix
-        value={parseInt(sizeValue)}
+        value={sizeValue}
         onChange={handleChangeSize}
         className="inputName"
       />
