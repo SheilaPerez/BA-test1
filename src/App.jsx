@@ -62,7 +62,8 @@ function App() {
         // Los estilos deberían estar definidos a nivel de componente.
         // Mejor crear un componente por cada forma para tener un control granular y poder testearlo en el futuro.
         // Al ser formas básicas en web, en lugar de CSS usar SVG.
-        // Crear un componente Circle.jsx y validar las props. Tendras más control, mejor validación y claridad de código.
+        // Crear un componente (Circle|Triangle|Square|...).jsx y validar las props. Tendras más control, mejor validación y claridad de código.
+        // Te he dejado un ejemplo en atoms
         style={{
           borderBottom: `${triangleSize}px solid ${triangleColorValue}`,
           borderRight: `${triangleSize / 2}px solid transparent`,

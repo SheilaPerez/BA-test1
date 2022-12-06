@@ -1,6 +1,7 @@
 import './GeometricComponent.css'
 import React from 'react'
 
+// Casi siempre que tienes una molecula, deberías necesitar un ATOMS antes
 function GeometricComponent({
   geometricForm,
   geometricClass,
