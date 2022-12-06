@@ -33,7 +33,7 @@ function App() {
 
   // Estas funciones no aportan gran valor y se recrean en cada render.
   // Mejor usar directamente como callback setTriangleColor.
-  // También mejor setTriangleColor que setTriangleColorValue...
+  // También mejor setTriangleColor que setTriangleColorValue.
   const changeColorTriangle = (e) => {
     setTriangleColorValue(e.target.value)
   }
