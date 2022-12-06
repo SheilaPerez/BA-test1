@@ -31,6 +31,9 @@ function App() {
     }
   }, [triangleSize, circleSize, squareSize])
 
+  // Estas funciones no aportan gran valor y se recrean en cada render.
+  // Mejor usar directamente como callback setTriangleColor.
+  // También mejor setTriangleColor que setTriangleColorValue.
   const changeColorTriangle = (e) => {
     setTriangleColorValue(e.target.value)
   }
@@ -56,6 +59,11 @@ function App() {
         geometricForm="Triangle"
         handleChangeSize={(e) => changeSizeTriangle(e)}
         sizeValue={triangleSize}
+        // Los estilos deberían estar definidos a nivel de componente.
+        // Mejor crear un componente por cada forma para tener un control granular y poder testearlo en el futuro.
+        // Al ser formas básicas en web, en lugar de CSS usar SVG.
+        // Crear un componente (Circle|Triangle|Square|...).jsx y validar las props. Tendras más control, mejor validación y claridad de código.
+        // Te he dejado un ejemplo en atoms
         style={{
           borderBottom: `${triangleSize}px solid ${triangleColorValue}`,
           borderRight: `${triangleSize / 2}px solid transparent`,
@@ -63,6 +71,7 @@ function App() {
           borderLeft: `${triangleSize / 2}px solid transparent`,
         }}
         colorValue={triangleColorValue}
+        // Aquí es triangle, y en los otros es Circle (escoge camelCase o PascalCase, pero se consistente).
         geometricClass="triangle"
         handleChangeColor={changeColorTriangle}
       />
