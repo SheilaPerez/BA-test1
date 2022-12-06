@@ -25,6 +25,10 @@ function GeometricComponent({
       <label htmlFor="colorValue" className="label">
         {geometricForm} color
       </label>
+      {/*
+        Por accesibilidad falta el name y el id del input, pero al tener todo en un componente no puedes
+        porque se repetirian y dañarian la accesibilidad.
+      */}
       <input type="color" value={colorValue} onChange={handleChangeColor} />
       <div className={geometricClass} style={style} />
     </div>
