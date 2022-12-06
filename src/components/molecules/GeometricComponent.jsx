@@ -1,34 +1,42 @@
 import './GeometricComponent.css'
 import React from 'react'
+import PropTypes from 'prop-types'
 
 function GeometricComponent({
   geometricForm,
-  geometricClass,
-  colorValue,
+  color,
   handleChangeColor,
-  style,
   handleChangeSize,
-  sizeValue,
+  size,
+  children,
 }) {
   return (
     <div>
-      <label htmlFor="sizeValue" className="label">
+      <label htmlFor="size" className="label">
         {geometricForm} Size
       </label>
       <input
         type="number"
-        // eslint-disable-next-line radix
-        value={sizeValue}
+        value={size}
         onChange={handleChangeSize}
         className="inputName"
       />
-      <label htmlFor="colorValue" className="label">
+      <label htmlFor="color" className="label">
         {geometricForm} color
       </label>
-      <input type="color" value={colorValue} onChange={handleChangeColor} />
-      <div className={geometricClass} style={style} />
+      <input type="color" value={color} onChange={handleChangeColor} />
+      {children}
     </div>
   )
+}
+
+GeometricComponent.propTypes = {
+  geometricForm: PropTypes.string.isRequired,
+  size: PropTypes.number.isRequired,
+  color: PropTypes.string.isRequired,
+  handleChangeColor: PropTypes.func.isRequired,
+  handleChangeSize: PropTypes.func.isRequired,
+  children: PropTypes.element.isRequired,
 }
 
 export default GeometricComponent
